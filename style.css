@@ -19,7 +19,7 @@
 }
 
 .feature-text-color{
-    color: #FF900E;
+    color: solid#FF900E;
 
 }
 .bg-light{
@@ -28,6 +28,15 @@
 
 .main >section{
     margin-top: 130px;
+}
+
+.section-titel{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.some-facts p{
+    margin: 50px auto;
 }
 
 
@@ -54,11 +63,6 @@
 .btn:active {
     transform: scale(0.97);
 }
-
-
-
-
-
 
 
 
@@ -136,38 +140,94 @@
     gap: px;
 }
 
-.feature-titel{
-    font-size: 2.8rem;
-    font-weight: 700;
-}
+
 
 #quick-list{
     font-weight: 500;
 }
 
-/* Feature will Enjoy */
+/* Some Facts */
+
+.fact-container{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr) ;
+    align-items: center;
+}
+.fact-card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.fact-number{
+    font-size: 2.8em;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+/* SPONSOR */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsor-company{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.sponsor-company img{
+    filter: grayscale(100%);
+}
 
 
 
 
 
-
-
-
-
+/* footer */
+.footer-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.footer-box{
+    width: 1550px;
+    height: 100px;
+    background-color: #FFF4E7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Responsive */
 @media screen and (max-width: 576px) {
     .navbar, .nav-link, .team{
         flex-direction: column;
+
     }
 
-.team-img-container{
+.team-img-container, .fact-container, .sponsor-company, .footer-section{
     grid-template-columns: repeat(1, 1fr);
+    margin: 0px auto;
 }
 .our-feature{
     margin-left: 80px;
 }  
+}
+.fact-container, .sponsor-company{
+    justify-items: center;
+    gap: 24px;
+}
+.fact-cont {
+    justify-items: center;
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -178,4 +238,8 @@
 .our-feature{
     margin: 50px auto;    
 }
+.sponsor-company{
+    grid-template-columns: repeat(3, 1fr);
+}
+
 }
